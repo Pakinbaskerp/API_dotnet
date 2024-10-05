@@ -1,8 +1,24 @@
 [
   {
     "ContainingType": "API.Controllers.AccountController",
+    "Method": "Login",
+    "RelativePath": "api/auth/login",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "loginDto",
+        "Type": "API.Data.Dto.LoginDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.AccountController",
     "Method": "Register",
-    "RelativePath": "api/account/register",
+    "RelativePath": "api/auth/register",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
@@ -16,16 +32,67 @@
     "ReturnTypes": []
   },
   {
-    "ContainingType": "API.Controllers.AccountController",
-    "Method": "Login",
-    "RelativePath": "api/auth/login",
+    "ContainingType": "API.Controllers.EmailController",
+    "Method": "ImportEmail",
+    "RelativePath": "api/email/detail-import",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,
     "Parameters": [
       {
-        "Name": "loginDto",
-        "Type": "API.Data.Dto.LoginDto",
+        "Name": "ContentType",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "ContentDisposition",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "Headers",
+        "Type": "Microsoft.AspNetCore.Http.IHeaderDictionary",
+        "IsRequired": false
+      },
+      {
+        "Name": "Length",
+        "Type": "System.Int64",
+        "IsRequired": false
+      },
+      {
+        "Name": "Name",
+        "Type": "System.String",
+        "IsRequired": false
+      },
+      {
+        "Name": "FileName",
+        "Type": "System.String",
+        "IsRequired": false
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.EmailController",
+    "Method": "DownlodTemplate",
+    "RelativePath": "api/email/template-export",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
+    "ContainingType": "API.Controllers.AccountController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/profile/update",
+    "HttpMethod": "PUT",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "updateProfileDto",
+        "Type": "API.Data.Dto.UpdateProfileDto",
         "IsRequired": true
       }
     ],
